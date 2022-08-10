@@ -1,0 +1,39 @@
+﻿<Window x:Class="BookSeller.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookSeller.Views"
+        mc:Ignorable="d"
+        Title="ShellView" FontSize="14" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <!-- Buttom column -->
+        <DockPanel Grid.Row="1" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="BuyBook_Button" Grid.Row="0" Margin="5">Purchance book</Button>
+                <Button x:Name="CheckBookStock_Button" Grid.Row="1" Margin="5">Check stock</Button>
+                <Button x:Name="Repory_Button" Grid.Row="2" Margin="5">Report</Button>
+            </Grid>
+        </DockPanel>
+        
+        <!-- Content control -->
+        <ContentControl x:Name="ActiveItem" Grid.Row="1" Grid.Column="2"/>
+    </Grid>
+</Window>
